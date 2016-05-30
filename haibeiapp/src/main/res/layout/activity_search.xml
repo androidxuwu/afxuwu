@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.haibeiapp.ui.SearchActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_margin="10dp"
+       android:id="@+id/ll_search">
+       <EditText
+           android:layout_width="0dp"
+           android:layout_weight="6"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@mipmap/search"
+           android:id="@+id/et_search"
+           android:singleLine="true"
+           android:background="@drawable/edittext_shape"/>
+       <TextView
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_marginLeft="20dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/tv_search_quxiao"
+           android:text="取消"/>
+   </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_search"
+        android:id="@+id/search_view"
+        android:background="#6b6969"></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_find"
+        android:layout_below="@+id/search_view"
+        android:textStyle="bold"
+        android:background="#e1dede"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:text="热词搜索"/>
+    <com.example.haibeiapp.ui.SearchLayout
+        android:id="@+id/Search_layout"
+        android:layout_below="@id/tv_find"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="爱他美" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="喜宝" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="ChuChuBaby" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="@string/tv_search_mama" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="Betta" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="Coach" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_tv_shape"
+            android:padding="7dp"
+            android:text="直邮" />
+
+    </com.example.haibeiapp.ui.SearchLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_oldfind"
+        android:layout_below="@+id/Search_layout"
+        android:textStyle="bold"
+        android:background="#e1dede"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="最近搜索"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_oldfind"
+        android:layout_above="@+id/tv_delrecode"
+        android:id="@+id/lv_oldsearch"></ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清楚历史记录"
+        android:id="@+id/tv_delrecode"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

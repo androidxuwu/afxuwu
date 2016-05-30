@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:id="@+id/rl_listview_category">
+
+    <ImageView
+        android:id="@+id/iv_gridview_category"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_above="@+id/tv_category_name"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_category_discount"
+        android:layout_width="20dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/sale"
+        android:gravity="center"
+        android:text="8.1折"
+        android:textSize="10sp" />
+</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_listview_category_title"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/rl_listview_category"
+        android:layout_toEndOf="@+id/rl_listview_category" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥26.4"
+        android:id="@+id/tv_listview_category_price"
+        android:layout_marginBottom="10dp"
+        android:layout_alignBottom="@+id/rl_listview_category"
+        android:layout_toRightOf="@+id/rl_listview_category"
+        android:layout_toEndOf="@+id/rl_listview_category" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@mipmap/wish_heart_white"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/tv_listview_category_price"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

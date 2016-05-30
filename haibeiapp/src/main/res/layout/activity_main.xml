@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <android.support.v4.widget.SlidingPaneLayout
+        android:id="@+id/slidingpanelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--侧滑-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f5f4f4">
+
+            <LinearLayout
+                android:id="@+id/ll_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/user_img" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:text="登陆"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll_loading"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#eae6e6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/home"
+                    android:text="首页" />
+
+                <TextView
+                    android:id="@+id/tv_discover"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/discover"
+                    android:text="发现" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/category"
+                    android:text="分类" />
+
+                <TextView
+                    android:id="@+id/tv_orders"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/orders"
+                    android:text="订单" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/settings"
+                    android:text="设置" />
+
+                <TextView
+                    android:id="@+id/tv_help"
+                    style="@style/textviewstyle"
+                    android:drawableLeft="@mipmap/help"
+                    android:text="帮助" />
+
+                <View style="@style/textviewstyle" />
+
+                <View style="@style/textviewstyle" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--首页 -->
+        <RelativeLayout
+            android:id="@+id/rl_neirong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/menu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="海呗"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/search" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+                android:id="@+id/swipyrefreshlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                app:srl_direction="both">
+
+                <in.srain.cube.views.GridViewWithHeaderAndFooter
+                    android:id="@+id/gv_shouye"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp">
+
+                </in.srain.cube.views.GridViewWithHeaderAndFooter>
+            </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SlidingPaneLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">海呗</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_search_mama">MaMa&amp;Kids</string>
+    <string name="deatils_fuwuzhichi">发货地  日本\n支付方式  微信支付\n购买权益  [海呗保障]退款&amp;30天退货保障</string>
+</resources>
